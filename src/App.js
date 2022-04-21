@@ -38,7 +38,7 @@ function App() {
               <img
                 alt=""
                 width="100%"
-                src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?cs=srgb&dl=pexels-pixabay-60597.jpg"
+                src="https://i.imgur.com/h1vMJwO.png"
               />
             </picture>
           </foreignObject>

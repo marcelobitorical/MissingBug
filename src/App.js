@@ -5,12 +5,15 @@ function App() {
   const [delta, setDelta] = useState(0);
 
   const handleTouchMove = (event) => {
-    let delta = (event.touches[0].clientX * 2) / 2;
-    console.log({
-      delta,
-    });
+    let delta = event.touches[0].clientX;
     setDelta(delta);
   };
+
+  const handleMouseMove = (event) => {
+    let delta = event.clientX + 40;
+    setDelta(delta);
+  };
+
 
   return (
     <div
@@ -19,13 +22,14 @@ function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        border: "5px solid #413793"
       }}
     >
       <svg
-        className="box"
         width="500"
         height="500"
         onTouchMove={handleTouchMove}
+        onMouseMove={handleMouseMove}
         style={{ background: "#283593" }}
       >
         <g>
@@ -40,9 +44,9 @@ function App() {
           </foreignObject>
         </g>
       </svg>
-      <div>
-        <div style={{ width: delta, background: "black" }}></div>
-      </div>
+        <div style={{ width: delta, background: "#001064", color: "white", fontSize: '1.2rem' }}>
+          Another div here with {delta}px.
+        </div>
     </div>
   );
 }

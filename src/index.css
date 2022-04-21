@@ -13,8 +13,6 @@ code {
 }
 
 body {
-  height: 100vh;
-  width: 100%;
   overflow: hidden;
   touch-action: pan-x pan-y;
 }

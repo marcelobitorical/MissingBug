@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Reproduction of the stripes that appear in SVG
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

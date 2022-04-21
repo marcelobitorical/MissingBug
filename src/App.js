@@ -16,12 +16,6 @@ function App() {
   const handleTouchMove = (event) => {
     if (event.touches.length === 2) {
       let delta_0 = (event.touches[0].clientX + event.touches[1].clientX ) / 2; 
-      // console.log({
-      //   "0x": event.touches[0].clientX,
-      //   "0y": event.touches[0].clientY,
-      //   "1y": event.touches[1].clientY,
-      //   "2y": event.touches[1].clientY,
-      // });
       console.log({
         delta_0
       });
@@ -32,7 +26,7 @@ function App() {
   return (
     <div
       style={{
-        background: "skyblue",
+        background: "#5f5fc4",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -45,6 +39,7 @@ function App() {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
+        style={{ background: "#283593" }}
       >
         <g>
           <foreignObject x="0" y="0" width="500" height="500">

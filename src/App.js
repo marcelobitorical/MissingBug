@@ -2,16 +2,14 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [deltaX, setDeltaX] = useState(0);
+  const [delta, setDelta] = useState(0);
 
   const handleTouchMove = (event) => {
-    if (event.touches.length === 2) {
-      let delta = (event.touches[0].clientX + event.touches[1].clientX) / 2;
-      console.log({
-        delta,
-      });
-      setDeltaX(delta);
-    }
+    let delta = (event.touches[0].clientX * 2) / 2;
+    console.log({
+      delta,
+    });
+    setDelta(delta);
   };
 
   return (
@@ -43,7 +41,7 @@ function App() {
         </g>
       </svg>
       <div>
-        <div style={{ width: deltaX, background: "black" }}></div>
+        <div style={{ width: delta, background: "black" }}></div>
       </div>
     </div>
   );

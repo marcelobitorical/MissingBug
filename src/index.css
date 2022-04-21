@@ -12,9 +12,7 @@ code {
     monospace;
 }
 
-html,
-body,
-#root {
+body {
   height: 100vh;
   width: 100%;
   overflow: hidden;

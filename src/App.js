@@ -2,24 +2,15 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [isMouseHolding, setIsMouseHolding] = useState(false);
   const [deltaX, setDeltaX] = useState(0);
-
-  const handleTouchStart = (event) => {
-    setIsMouseHolding(true);
-  };
-
-  const handleTouchEnd = (event) => {
-    setIsMouseHolding(false);
-  }
 
   const handleTouchMove = (event) => {
     if (event.touches.length === 2) {
-      let delta_0 = (event.touches[0].clientX + event.touches[1].clientX ) / 2; 
+      let delta = (event.touches[0].clientX + event.touches[1].clientX) / 2;
       console.log({
-        delta_0
+        delta,
       });
-      setDeltaX(delta_0);
+      setDeltaX(delta);
     }
   };
 
@@ -36,9 +27,7 @@ function App() {
         className="box"
         width="500"
         height="500"
-        onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
         style={{ background: "#283593" }}
       >
         <g>
@@ -54,7 +43,7 @@ function App() {
         </g>
       </svg>
       <div>
-        <div style={{ width: deltaX, background: 'blue' }}></div>
+        <div style={{ width: deltaX, background: "black" }}></div>
       </div>
     </div>
   );

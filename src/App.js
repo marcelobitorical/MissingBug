@@ -22,7 +22,7 @@ function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        border: "5px solid #413793"
+        border: "1px solid #413793"
       }}
     >
       <svg
